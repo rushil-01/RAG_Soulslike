@@ -101,7 +101,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ----------------- Setup RAG Pipeline -----------------
-GOOGLE_API_KEY = os.environ.get("AQ.Ab8RN6IVCxfFZA79VSsMgZMv0RPJmAThrs6zr6G_pQ_zd7h6Ng")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
 @st.cache_resource
 def get_rag_chain():
@@ -150,7 +150,7 @@ def get_rag_chain():
 
     embeddings = GoogleGenerativeAIEmbeddings(
         model="models/embedding-001",
-        google_api_key=GOOGLE_API_KEY
+        google_api_key=GEMINI_API_KEY
     )
     
     vectorstore = FAISS.from_documents(sample_docs, embeddings)
@@ -158,7 +158,7 @@ def get_rag_chain():
 
     llm = ChatGoogleGenerativeAI(
         model="gemini-1.5-flash",
-        google_api_key=GOOGLE_API_KEY,
+        google_api_key=GEMINI_API_KEY,
         temperature=0.3
     )
 
@@ -227,7 +227,7 @@ if user_input:
         </div>
     """, unsafe_allow_html=True)
 
-    if not GOOGLE_API_KEY:
+    if not GEMINI_API_KEY:
         response_text = "Please set the `GEMINI_API_KEY` environment variable to run queries."
     else:
         try:
