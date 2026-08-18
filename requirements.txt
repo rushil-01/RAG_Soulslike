@@ -1,6 +1,7 @@
-streamlit
-langchain
-langchain-community
-langchain-google-genai
+streamlit>=1.35
+langchain>=0.3
+langchain-community>=0.3
+langchain-google-genai>=2.1.0
+google-generativeai>=0.8.5
 faiss-cpu
-pydantic
+pydantic>=2
