@@ -35,7 +35,7 @@ Hollow Knight, and The Surge.
 @st.cache_resource
 def get_chain():
     llm = ChatGoogleGenerativeAI(
-        model="gemini-1.5-flash",
+        model="gemini-2.5-flash",
         google_api_key=GEMINI_API_KEY,
         temperature=0.3
     )
