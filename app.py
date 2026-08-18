@@ -101,7 +101,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ----------------- Setup RAG Pipeline -----------------
-GOOGLE_API_KEY = os.environ.get("AQ.Ab8RN6Kr0xFoHtQ873pWsSSqM_yNjqjjf0ig3V50VKlWMO5Mww")
+GOOGLE_API_KEY = os.environ.get("AQ.Ab8RN6IVCxfFZA79VSsMgZMv0RPJmAThrs6zr6G_pQ_zd7h6Ng")
 
 @st.cache_resource
 def get_rag_chain():
